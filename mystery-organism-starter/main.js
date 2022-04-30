@@ -21,10 +21,20 @@ function pAquorFactory(num, strand) {
     dna: strand,
     // random select one base from the dna strand and change it randomly, then return dna strnad
     mutate() {
-      let randBase = returnRandBase();
-      let randBasePick = strand[Math.floor(Math.random() * 15) - 1];
-      console.log(randBasePick);
-      console.log(randBase);
+      //let randBasePick = strand[rand];
+      while (x = true) {
+        let randBase = returnRandBase();
+        let rand = Math.floor(Math.random() * 15) - 1;
+        let basePick = this.dna[rand];
+        let newStrand = [];
+
+        if (randBase === !basePick) {
+          newStrand = this.dna;
+          newStrand[rand] = randBase;
+          return newStrand;
+          x = false;
+        }
+      }
     }
 
   }
