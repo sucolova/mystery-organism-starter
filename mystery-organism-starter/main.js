@@ -13,8 +13,22 @@ const mockUpStrand = () => {
   return newStrand;
 };
 
+// returns an Object 
 
+function pAquorFactory(num, strand) {
+  return {
+    specimenNum: num,
+    dna: strand,
+    // random select one base from the dna strand and change it randomly, then return dna strnad
+    mutate() {
 
+    }
+
+  }
+}
+
+// testing
+console.log("randBase", returnRandBase());
 
 
 
