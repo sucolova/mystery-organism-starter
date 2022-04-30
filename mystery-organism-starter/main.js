@@ -79,7 +79,11 @@ function pAquorFactory(num, strand) {
   }
 }
 
+pArr = [];
 
+for (i = 0; i <= 29; i++) {
+  pArr.push(pAquorFactory(i, mockUpStrand()));
+}
 
 // testing
 //console.log("randBase", returnRandBase());
@@ -87,6 +91,7 @@ function pAquorFactory(num, strand) {
 creature = pAquorFactory(1, mockUpStrand());
 creature2 = pAquorFactory(2, mockUpStrand());
 console.log(creature.willLikelySurvive());
+console.log(pArr[2]);
 
 //creature.compareDna(creature2);
 //console.log("mutate", creature.mutate());
