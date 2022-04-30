@@ -31,6 +31,7 @@ function pAquorFactory(num, strand) {
         if (randBase === !basePick) {
           newStrand = this.dna;
           newStrand[rand] = randBase;
+          console.log("old", this.dna, "new", newStrand);
           return newStrand;
           x = false;
         }
@@ -42,7 +43,7 @@ function pAquorFactory(num, strand) {
 
 // testing
 //console.log("randBase", returnRandBase());
-console.log("strand", mockUpStrand());
+//console.log("strand", mockUpStrand());
 creature = pAquorFactory(1, mockUpStrand());
 console.log("mutate", creature.mutate());
 
