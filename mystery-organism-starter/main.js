@@ -21,14 +21,20 @@ function pAquorFactory(num, strand) {
     dna: strand,
     // random select one base from the dna strand and change it randomly, then return dna strnad
     mutate() {
-
+      let randBase = returnRandBase();
+      let randBasePick = strand[Math.floor(Math.random() * 15) - 1];
+      console.log(randBasePick);
+      console.log(randBase);
     }
 
   }
 }
 
 // testing
-console.log("randBase", returnRandBase());
+//console.log("randBase", returnRandBase());
+console.log("strand", mockUpStrand());
+creature = pAquorFactory(1, mockUpStrand());
+console.log("mutate", creature.mutate());
 
 
 
